@@ -1,0 +1,13 @@
+def x(y):
+    if y < 2:
+        return False
+    for i in range( int(y**0.5) + 1):
+        if y % i == 0:
+            return False
+    return True
+start = int(input("Enter the start index : "))
+end = int(input("Enter the end index : "))
+print("Prime numbers in the range:")
+for y in range(start, end + 1):
+    if x(y):
+        print(y)
